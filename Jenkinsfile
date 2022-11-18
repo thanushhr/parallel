@@ -12,12 +12,16 @@ pipeline {
       }  
     } 
 stage ('TEST PARALLEL') {
+	environment {
+		$NAME='Hellllooo'
+	}
     parallel {
     stage ('TEST1') {
       steps {
         echo "This is Test stage" 
         sh '''
           echo "p1"
+	  $NAME
           exit 0
           '''
         }
