@@ -21,7 +21,7 @@ stage ('TEST PARALLEL') {
         echo "This is Test stage" 
         sh '''
           echo "p1"
-	  $NAME
+	  echo $NAME
           exit 0
           '''
         }
