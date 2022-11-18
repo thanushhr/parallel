@@ -10,7 +10,8 @@ pipeline {
 	        exit 0 
 	   '''
       }  
-    }  
+    } 
+stage ('TEST PARALLEL') {
     parallel {
     stage ('TEST1') {
       steps {
@@ -28,6 +29,7 @@ pipeline {
           echo "p2"
           exit 0
           '''
+          }
         }
       }
     }  
