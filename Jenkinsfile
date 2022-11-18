@@ -13,7 +13,7 @@ pipeline {
     } 
 stage ('TEST PARALLEL') {
 	environment {
-		$NAME='Hellllooo'
+		$NAME = 'Hellllooo'
 	}
     parallel {
     stage ('TEST1') {
