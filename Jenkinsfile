@@ -12,9 +12,6 @@ pipeline {
       }  
     } 
 stage ('TEST PARALLEL') {
-	environment {
-		$NAME = 'Hellllooo'
-	}
     parallel {
     stage ('TEST1') {
       steps {
