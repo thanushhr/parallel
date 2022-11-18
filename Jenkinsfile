@@ -18,17 +18,16 @@ stage ('TEST PARALLEL') {
     parallel {
     stage ('TEST1') {
       steps {
-        echo "$NAME" 
+        echo "This is Test1" 
         sh '''
           echo "p1"
-	  echo $NAME
           exit 0
           '''
         }
       } 
       stage ('TEST2') {
       steps {
-        echo "This is Deploy stage" 
+        echo "This is Test2 stage" 
         sh '''
           echo "p2"
           exit 0
