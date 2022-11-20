@@ -37,10 +37,10 @@ stage ('TEST PARALLEL') {
         }
       }
     }  
-	  environment {
-		  DO = 'done'
-	  }
     stage ('DEPLOY') {
+    environment {
+	 DO = 'done'
+	}
       steps {
         echo "$DO" 
         sh 'sleep 5'
