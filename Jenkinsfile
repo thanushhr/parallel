@@ -10,7 +10,7 @@ pipeline {
         echo "$NAME" 
         sh '''
 		echo $NAME
-		echo "Hello"
+		echo "over"
 	        exit 0 
 	   '''
       }  
