@@ -1,11 +1,15 @@
 pipeline {
-  agent any	
+  agent any
+	environment {
+		NAME = 'hello'
+	}
   stages {
 
     stage ('PRINT') {
       steps {
-        echo "This is Print stage" 
+        echo "$NAME" 
         sh '''
+		echo $NAME
 		echo "Hello"
 	        exit 0 
 	   '''
