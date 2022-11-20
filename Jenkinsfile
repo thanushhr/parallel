@@ -7,7 +7,7 @@ pipeline {
 
     stage ('PRINT') {
       steps {
-        echo "$NAME" 
+        echo "This is print stage" 
         sh '''
 		echo $NAME
 		echo "over"
@@ -37,10 +37,12 @@ stage ('TEST PARALLEL') {
         }
       }
     }  
-    
+	  environment {
+		  DO = 'done'
+	  }
     stage ('DEPLOY') {
       steps {
-        echo "This is Deploy stage" 
+        echo "$DO" 
         sh 'sleep 5'
       }  
     }  
